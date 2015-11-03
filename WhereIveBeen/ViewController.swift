@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var places = [Place]()
-    var fetchedResultsController = NSFetchedResultsController!()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
     }
     
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        tableView.reloadData()
+    }
+    
     func fetchAndSetResults() {
         let app = UIApplication.sharedApplication().delegate as! AppDelegate
         let context = app.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Place")
+        
+        do {
+            let results = try context.executeFetchRequest(fetchRequest)
+            self.places = results as! [Place]
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
     }
 
     override func didReceiveMemoryWarning() {
