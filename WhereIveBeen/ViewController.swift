@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     var places = [Place]()
+    var fetchedResultsController = NSFetchedResultsController!()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
     }
 
     override func didReceiveMemoryWarning() {
