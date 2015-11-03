@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1003" y="-389"/>
         </scene>
-        <!--View Controller-->
+        <!--Add PlaceVC-->
         <scene sceneID="J0a-0b-DEF">
             <objects>
-                <viewController id="zdy-87-GWz" sceneMemberID="viewController">
+                <viewController id="zdy-87-GWz" customClass="AddPlaceVC" customModule="WhereIveBeen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VBQ-6d-naB"/>
                         <viewControllerLayoutGuide type="bottom" id="G35-rb-6g6"/>
@@ -138,7 +138,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SRX-f2-yZE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6873995-Beach_and_cliff_edge_at_Torrey_Pines_San_Diego" translatesAutoresizingMaskIntoConstraints="NO" id="SRX-f2-yZE">
                                 <rect key="frame" x="213" y="292" width="175" height="175"/>
                                 <animations/>
                                 <constraints>
@@ -152,6 +152,9 @@
                                 <state key="normal" title="Add Image">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImgBtnPressed:" destination="zdy-87-GWz" eventType="touchUpInside" id="iVu-aY-LBE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J84-Kc-aPY">
                                 <rect key="frame" x="235" y="508" width="130" height="33"/>
@@ -170,6 +173,9 @@
                                         <exclude reference="eeh-Mk-UtB"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="addPlaceBtnPressed:" destination="zdy-87-GWz" eventType="touchUpInside" id="Bcp-vB-fYC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -194,6 +200,14 @@
                             <constraint firstItem="xRQ-mL-2bY" firstAttribute="top" secondItem="pf6-aN-dyv" secondAttribute="bottom" constant="14" id="m1J-LX-jtm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addImgBtn" destination="aYU-jz-LsP" id="95S-hk-16z"/>
+                        <outlet property="addPlaceBtn" destination="J84-Kc-aPY" id="IKj-Vm-IQg"/>
+                        <outlet property="placeCompany" destination="QMq-cR-vMm" id="jTj-RI-jC0"/>
+                        <outlet property="placeDesc" destination="xRQ-mL-2bY" id="ytZ-xW-gCg"/>
+                        <outlet property="placeImg" destination="SRX-f2-yZE" id="NWW-yz-Ngd"/>
+                        <outlet property="placeName" destination="pf6-aN-dyv" id="61O-CN-wnO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URP-T8-467" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,4 +234,7 @@
             <point key="canvasLocation" x="238" y="-389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="6873995-Beach_and_cliff_edge_at_Torrey_Pines_San_Diego" width="1600" height="1200"/>
+    </resources>
 </document>

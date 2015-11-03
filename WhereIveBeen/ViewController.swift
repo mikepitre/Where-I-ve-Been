@@ -49,17 +49,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PlaceCell") as? PlaceCell {
-            
             let place = places[indexPath.row]
-            
             cell.configureCell(place)
-            
             return cell
             
         } else {
-            
             return PlaceCell()
-            
         }
         
     }

@@ -16,6 +16,7 @@
 		8FC2CFAD1BE9595F00C380AA /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2CFAB1BE9595F00C380AA /* Place+CoreDataProperties.swift */; };
 		8FC2CFAE1BE9595F00C380AA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2CFAC1BE9595F00C380AA /* Place.swift */; };
 		8FC2CFB01BE968AA00C380AA /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2CFAF1BE968AA00C380AA /* PlaceCell.swift */; };
+		8FC2CFB21BE9771700C380AA /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2CFB11BE9771700C380AA /* AddPlaceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8FC2CFAB1BE9595F00C380AA /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Place+CoreDataProperties.swift"; path = "../Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8FC2CFAC1BE9595F00C380AA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Place.swift; sourceTree = "<group>"; };
 		8FC2CFAF1BE968AA00C380AA /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		8FC2CFB11BE9771700C380AA /* AddPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8FC2CF951BE9491C00C380AA /* ViewController.swift */,
+				8FC2CFB11BE9771700C380AA /* AddPlaceVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				8FC2CF961BE9491C00C380AA /* ViewController.swift in Sources */,
 				8FC2CFAD1BE9595F00C380AA /* Place+CoreDataProperties.swift in Sources */,
+				8FC2CFB21BE9771700C380AA /* AddPlaceVC.swift in Sources */,
 				8FC2CF941BE9491C00C380AA /* AppDelegate.swift in Sources */,
 				8FC2CF9C1BE9491C00C380AA /* WhereIveBeen.xcdatamodeld in Sources */,
 				8FC2CFAE1BE9595F00C380AA /* Place.swift in Sources */,
