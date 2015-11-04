@@ -65,7 +65,7 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                 print("Could not save place.")
             }
             
-            dismissViewControllerAnimated(true, completion: nil)
+            self.navigationController?.popViewControllerAnimated(true)
             
         }
     }
